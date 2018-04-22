@@ -6,6 +6,6 @@ echo '################## About to run setup_ansible.sh script ##################
 echo '##########################################################################'
 
 
-
+yum install -y ansible
 
 exit 0
