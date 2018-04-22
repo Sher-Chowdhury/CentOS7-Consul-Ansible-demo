@@ -9,11 +9,13 @@ echo '##################################################################'
 
 yum install -y epel-release 
 yum install -y vim 
+yum install -y unzip 
 yum install -y bash-completion 
 yum install -y man-pages
 yum install -y bash-completion-extras 
 yum install -y nc 
 yum install -y jq 
+yum install -y bind-utils
 
 
 exit 0

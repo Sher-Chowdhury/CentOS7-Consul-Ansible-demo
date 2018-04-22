@@ -24,6 +24,9 @@ Vagrant.configure(2) do |config|
     # https://www.vagrantup.com/docs/virtualbox/networking.html
     consul_server.vm.network "private_network", ip: "10.2.5.110", :netmask => "255.255.255.0", virtualbox__intnet: "intnet2"
 
+    consul_server.vm.network "forwarded_port", guest: 8500, host: 8500, protocol: 'tcp'
+
+
     consul_server.vm.provider "virtualbox" do |vb|
       vb.gui = true
       vb.memory = "1024"
@@ -33,6 +36,7 @@ Vagrant.configure(2) do |config|
     end
 
     consul_server.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
+    consul_server.vm.provision "shell", path: "scripts/install-consul.sh", privileged: true
     consul_server.vm.provision "shell", path: "scripts/setup_consul_server.sh", privileged: true
   end
 
@@ -50,6 +54,7 @@ Vagrant.configure(2) do |config|
     end
 
     consul_agent.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
+    consul_agent.vm.provision "shell", path: "scripts/install-consul.sh", privileged: true
     consul_agent.vm.provision "shell", path: "scripts/setup_consul_agent.sh", privileged: true
   end
 
