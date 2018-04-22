@@ -1,0 +1,12 @@
+# man systemd.unit
+# man systemd.service
+
+
+[Unit]
+Description=Consul Server
+
+[Service]
+ExecStart=/usr/sbin/consul
+
+[Install]
+WantedBy=multi-user.target

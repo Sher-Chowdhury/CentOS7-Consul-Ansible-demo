@@ -34,8 +34,8 @@ chmod 400 /etc/consul/consul.d/config.json
 
 # Need to use the following"
 # https://medium.com/@wenhuanglin/tutorial-on-running-nomad-and-consul-as-a-systemd-daemon-service-part-2-d1b999c73bdd 
-cp /vagrant/files/initd-consul /etc/init.d/consul
-chmod 0555 /etc/init.d/consul
+cp /vagrant/files/consul-agent.service /etc/systemd/system/consul-agent.service
+chmod 0555 /etc/systemd/system/consul-agent.service
 
 
 # need to uncomment this once config.json is in place
