@@ -35,3 +35,7 @@ consul info
 consul members
 consul monitor
 ```
+
+## Useful links
+
+[https://learn.hashicorp.com/consul/](https://learn.hashicorp.com/consul/)
