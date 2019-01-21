@@ -30,7 +30,7 @@ ensure_plugins required_plugins
 
 Vagrant.configure(2) do |config|
   config.vm.define "consul_server" do |consul_server|
-    consul_server.vm.box = "bento/centos-7.4"
+    consul_server.vm.box = "bento/centos-7.6"
     consul_server.vm.hostname = "consul-server.example.com"
     # https://www.vagrantup.com/docs/virtualbox/networking.html
     consul_server.vm.network "private_network", ip: "10.2.5.110", :netmask => "255.255.255.0", virtualbox__intnet: "intnet2"
@@ -53,7 +53,7 @@ Vagrant.configure(2) do |config|
 
 
   config.vm.define "consul_agent" do |consul_agent|
-    consul_agent.vm.box = "bento/centos-7.4"
+    consul_agent.vm.box = "bento/centos-7.6`"
     consul_agent.vm.hostname = "consul-agent.example.com"
     consul_agent.vm.network "private_network", ip: "10.2.5.111", :netmask => "255.255.255.0", virtualbox__intnet: "intnet2"
 
