@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes 
+  gather_facts: no
+  tasks:
+
+    - name: deploy consul.hcl config file
+      template: 
+        src: consul.hcl
+        dest: /etc/vault.d/vault.hcl
+        owner: vault
+        group: vault
+        mode: 0640

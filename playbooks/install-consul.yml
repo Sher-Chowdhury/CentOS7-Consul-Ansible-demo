@@ -36,7 +36,7 @@
         home: /etc/consul.d
         create_home: false
 
-    - name: Create directories used by consul 
+    - name: Create directories used by Consul 
       file:
         path: /etc/consul.d
         state: directory
