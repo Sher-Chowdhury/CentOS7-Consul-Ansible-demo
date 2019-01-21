@@ -3,7 +3,7 @@
 set -ex
 
 
-ConsulVersion=1.0.7
+ConsulVersion=1.4.0
 ConsulDownloadLink=https://releases.hashicorp.com/consul/${ConsulVersion}/consul_${ConsulVersion}_linux_amd64.zip
 
 echo "INFO: Downloading Consul"
