@@ -46,13 +46,12 @@ Vagrant.configure(2) do |config|
       vb.name = "centos7_consul_server"
     end
 
-#    consul_server.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
     consul_server.vm.provision "ansible" do |ansible|
-      ansible.playbook = "playbooks/install-rpms.yml"
-      ansible.playbook = "playbooks/install-consul.yml"
+      ansible.extra_vars = {
+        vm_role: "consul_server"
+      }
+      ansible.playbook = "playbooks/setup-consul.yml"
     end
-    # consul_server.vm.provision "shell", path: "scripts/install-consul.sh", privileged: true
-    consul_server.vm.provision "shell", path: "scripts/setup_consul_server.sh", privileged: true
 
 
   end
