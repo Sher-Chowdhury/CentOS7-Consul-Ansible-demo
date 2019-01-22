@@ -3,12 +3,12 @@
 # https://learn.hashicorp.com/consul/advanced/day-1-operations/deployment-guide
 - name: deploy consul daemon - which is used by both consul agents and servers
   copy: 
-    src: consul.service
-    dest: /etc/systemd/system/consul.service
-    owner: consul
-    group: consul
+    src: consul-template.service
+    dest: /etc/systemd/system/consul-template.service
+    owner: consul-template
+    group: consul-template
     mode: 0640
-  notify: restart consul
+  notify: restart consul-template
 
 - name: Make sure consul service is running
   systemd:

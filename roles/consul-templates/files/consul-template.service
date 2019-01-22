@@ -1,9 +1,8 @@
 # man systemd.unit
 # man systemd.service
-# https://learn.hashicorp.com/consul/advanced/day-1-operations/deployment-guide#configure-systemd
 
 [Unit]
-Description="HashiCorp Consul-template"
+Description="HashiCorp Consul-Template"
 Documentation=https://www.consul.io/
 Requires=network-online.target
 After=network-online.target
@@ -12,8 +11,8 @@ After=network-online.target
 [Service]
 User=consul
 Group=consul
-ExecStart=/usr/local/bin/consul agent -config-dir= -config=/etc/consul-template.d
-ExecReload=/usr/local/bin/consul reload
+ExecStart=/usr/local/bin/consul-template -config-dir= -config=/etc/consul-template.d
+ExecReload=/usr/local/bin/consul-template reload
 KillMode=process
 Restart=on-failure
 LimitNOFILE=65536
