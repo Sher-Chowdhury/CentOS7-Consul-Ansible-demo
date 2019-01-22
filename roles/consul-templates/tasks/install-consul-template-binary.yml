@@ -2,12 +2,13 @@
 
 - name: Set Consul Template version
   set_fact:
-    ConsulTemplateVersion: 1.4.0
+    ConsulTemplateVersion: 0.19.5
 
 # https://learn.hashicorp.com/consul/getting-started/install
 - name: Download and Unarchive Consul Tempalate binary zip file. 
   unarchive:
     src: https://releases.hashicorp.com/consul-template/{{ ConsulTemplateVersion }}/consul-template_{{ ConsulTemplateVersion }}_linux_amd64.zip
+          https://releases.hashicorp.com/consul/1.4.0/consul_1.4.0_linux_amd64.zip
     dest: /usr/local/bin
     owner: root
     group: root
