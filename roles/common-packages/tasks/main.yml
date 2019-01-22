@@ -11,8 +11,8 @@
     state: present
   vars:
     packages:
-      - vim
       - unzip
+      - vim
 #      - bash-completion
 #      - man-pages
 #      - bash-completion-extras
