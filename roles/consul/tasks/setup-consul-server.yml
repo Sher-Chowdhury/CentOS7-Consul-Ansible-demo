@@ -7,20 +7,3 @@
     owner: consul
     group: consul
     mode: 0640
-
-# https://learn.hashicorp.com/consul/advanced/day-1-operations/deployment-guide
-- name: deploy server consul.hcl config file
-  copy: 
-    src: consul-server.service
-    dest: /etc/systemd/system/consul-server.service
-    owner: consul
-    group: consul
-    mode: 0640
-  notify: restart consul-server
-
-- name: Make sure consul service is running
-  systemd:
-    state: started
-    enabled: true
-    name: consul-server
-    daemon_reload: yes
