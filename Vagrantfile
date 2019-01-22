@@ -69,7 +69,7 @@ Vagrant.configure(2) do |config|
       vb.name = "centos7_consul_agent"
     end
 
-    consul_server.vm.provision "ansible" do |ansible|
+    consul_agent.vm.provision "ansible" do |ansible|
       ansible.extra_vars = {
         vm_role: "webserver"
       }
