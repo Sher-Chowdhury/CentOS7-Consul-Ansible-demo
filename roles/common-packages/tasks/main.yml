@@ -13,7 +13,7 @@
     packages:
       - vim
       - unzip
-      - bash-completion
+#      - bash-completion
 #      - man-pages
 #      - bash-completion-extras
 #      - nc
