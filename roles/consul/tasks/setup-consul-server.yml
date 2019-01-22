@@ -1,6 +1,6 @@
 ---
 
-- name: deploy consul.hcl config file
+- name: deploy server consul.hcl config file
   template: 
     src: consul-server-config.hcl.j2 
     dest: /etc/vault.d/vault.hcl
