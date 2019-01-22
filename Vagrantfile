@@ -69,9 +69,13 @@ Vagrant.configure(2) do |config|
       vb.name = "centos7_consul_agent"
     end
 
-    consul_agent.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
-    consul_agent.vm.provision "shell", path: "scripts/install-consul.sh", privileged: true
-    consul_agent.vm.provision "shell", path: "scripts/setup_consul_agent.sh", privileged: true
+    consul_server.vm.provision "ansible" do |ansible|
+      ansible.extra_vars = {
+        vm_role: "webserver"
+      }
+      ansible.playbook = "setup-consul.yml"
+    end
+
   end
 
   config.vm.provision :hosts do |provisioner|
