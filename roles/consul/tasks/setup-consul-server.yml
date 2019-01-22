@@ -16,7 +16,7 @@
     owner: consul
     group: consul
     mode: 0640
-  notify: restart consul-server 
+  notify: restart consul-server
 
 - name: Make sure consul service is running
   systemd:

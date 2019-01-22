@@ -1,6 +1,6 @@
 ---
 
-- name: Make sure consul service is running
+- name: estart consul-server
   systemd:
     name: consul-server
     state: restarted
