@@ -2,7 +2,7 @@
 
 - name: deploy consul.hcl config file
   template: 
-    src: consul.hcl.j2
+    src: consul-server-config.hcl.j2 
     dest: /etc/vault.d/vault.hcl
     owner: vault
     group: vault
