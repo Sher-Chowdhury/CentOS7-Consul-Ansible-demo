@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes 
+  gather_facts: no
+  roles:
+    - { role: common-packages, tags: common-packages }
+    - { role: consul, tags: consul }
