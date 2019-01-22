@@ -3,7 +3,7 @@
 - name: deploy consul-template.hcl config file
   copy: 
     src: consul-template.hcl
-    dest: /etc/consul.d/consul-server.hcl
+    dest: /etc/consul-template/configs/consul-server.hcl
     owner: consul
     group: consul
     mode: 0640
