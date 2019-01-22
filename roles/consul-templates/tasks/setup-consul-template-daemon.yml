@@ -14,5 +14,5 @@
   systemd:
     state: started
     enabled: true
-    name: consul
+    name: consul-template
     daemon_reload: yes

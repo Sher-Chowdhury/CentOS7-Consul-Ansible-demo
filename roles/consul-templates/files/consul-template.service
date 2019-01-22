@@ -11,7 +11,7 @@ After=network-online.target
 [Service]
 User=consul
 Group=consul
-ExecStart=/usr/local/bin/consul-template -config-dir= -config=/etc/consul-template.d
+ExecStart=/usr/local/bin/consul-template -config=/etc/consul-template/configs
 ExecReload=/usr/local/bin/consul-template reload
 KillMode=process
 Restart=on-failure

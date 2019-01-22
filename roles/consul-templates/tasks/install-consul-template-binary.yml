@@ -31,7 +31,8 @@
     owner: consul
     group: consul
   loop:
-    - /etc/consul-template.d
+    - /etc/consul-template
+    - /etc/consul-template/consul-template.d
     - /opt/consul-template
 
 - name: Create the 'consul-template' user service account 
@@ -40,6 +41,6 @@
     comment: consul template service account
     system: true
     shell: /bin/false
-    home: /etc/consul-template.d
+    home: /etc/consul-template
     create_home: false
 
