@@ -50,7 +50,7 @@ Vagrant.configure(2) do |config|
       ansible.extra_vars = {
         vm_role: "consul_server"
       }
-      ansible.playbook = "playbooks/setup-consul.yml"
+      ansible.playbook = "setup-consul.yml"
     end
 
 
