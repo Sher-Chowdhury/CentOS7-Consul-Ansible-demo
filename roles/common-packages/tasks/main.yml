@@ -14,8 +14,8 @@
       - vim
       - unzip
       - bash-completion
-      - man-pages
-      - bash-completion-extras
-      - nc
-      - jq
-      - bind-utils
+#      - man-pages
+#      - bash-completion-extras
+#      - nc
+#      - jq
+#      - bind-utils
