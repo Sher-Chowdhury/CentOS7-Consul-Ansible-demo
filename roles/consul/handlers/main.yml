@@ -4,3 +4,4 @@
   systemd:
     name: consul-server
     state: restarted
+    daemon_reload: yes
