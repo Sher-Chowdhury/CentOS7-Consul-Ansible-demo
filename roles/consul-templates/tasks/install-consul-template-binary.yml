@@ -33,6 +33,7 @@
   loop:
     - /etc/consul-template
     - /etc/consul-template/consul-template.d
+    - /etc/consul-template/configs
     - /opt/consul-template
 
 - name: Create the 'consul-template' user service account 
