@@ -4,16 +4,16 @@
   copy: 
     src: configs
     dest: /etc/consul-template
-    owner: consul-template
-    group: consul-template
+    owner: root
+    group: root
     mode: 0640
 
 - name: Copy across ctmpl files
   copy: 
     src: ctmpl-files
     dest: /etc/consul-template
-    owner: consul-template
-    group: consul-template
+    owner: root
+    group: root 
     mode: 0640
 
 
