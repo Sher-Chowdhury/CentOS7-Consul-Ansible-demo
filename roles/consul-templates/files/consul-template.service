@@ -9,8 +9,8 @@ After=network-online.target
 #ConditionFileNotEmpty=/etc/consul.d/consul.hcl
 
 [Service]
-User=consul
-Group=consul
+User=consul-template
+Group=consul-template
 ExecStart=/usr/local/bin/consul-template -config=/etc/consul-template/configs
 ExecReload=/usr/local/bin/consul-template reload
 KillMode=process
