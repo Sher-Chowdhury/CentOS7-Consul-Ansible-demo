@@ -12,11 +12,11 @@
   vars:
     packages:
       - unzip
-      - vim
-      - bash-completion
-      - man-pages
-      - bash-completion-extras
-      - nc
-      - jq
-      - bind-utils
+#      - vim
+#      - bash-completion
+#      - man-pages
+#      - bash-completion-extras
+#      - nc
+#      - jq
+#      - bind-utils
       - ansible
