@@ -28,8 +28,8 @@
     path: "{{ item }}" 
     state: directory
     mode: 0750
-    owner: consul
-    group: consul
+    owner: consul-template
+    group: consul-template
   loop:
     - /etc/consul-template
 #    - /etc/consul-template/consul-template.d
