@@ -19,3 +19,4 @@
       - nc
       - jq
       - bind-utils
+      - ansible

@@ -3,7 +3,7 @@
 - name: Copy across configs
   copy: 
     src: configs
-    dest: /etc/consul-template/configs
+    dest: /etc/consul-template
     owner: consul-template
     group: consul-template
     mode: 0640
