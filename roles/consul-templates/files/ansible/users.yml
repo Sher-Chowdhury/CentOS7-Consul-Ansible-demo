@@ -10,7 +10,7 @@
       user:
         name: "{{ item.name }}" 
         comment: "{{ item.comment }}"
-        groups: "{{ item.groups }}" 
+#        groups: "{{ item.groups }}" 
         remove: no
         shell: /bin/bash
         state: "{{ item.state }}" 
