@@ -1,9 +1,17 @@
 ---
 
-- name: deploy consul-template.hcl config file
+- name: Copy across configs
   copy: 
-    src: consul-template.hcl
-    dest: /etc/consul-template/configs/consul-server.hcl
-    owner: consul
-    group: consul
+    src: configs
+    dest: /etc/consul-template/configs
+    owner: consul-template
+    group: consul-template
+    mode: 0640
+
+- name: Copy across ctmpl files
+  copy: 
+    src: ctmpl-files
+    dest: /etc/consul-template/ctmpl-files
+    owner: consul-template
+    group: consul-template
     mode: 0640

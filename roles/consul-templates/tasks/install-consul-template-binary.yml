@@ -32,7 +32,7 @@
     group: consul
   loop:
     - /etc/consul-template
-    - /etc/consul-template/consul-template.d
+#    - /etc/consul-template/consul-template.d
     - /etc/consul-template/configs
     - /opt/consul-template
 
