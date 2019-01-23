@@ -5,8 +5,8 @@
   copy: 
     src: consul-template.service
     dest: /etc/systemd/system/consul-template.service
-    owner: consul-template
-    group: consul-template
+    owner: root 
+    group: root 
     mode: 0640
   notify: restart consul-template
 
