@@ -21,6 +21,6 @@
   copy: 
     src: playbooks
     dest: /etc/consul-template/ansible
-    owner: consul-template
-    group: consul-template
+    owner: root
+    group: root
     mode: 0640
