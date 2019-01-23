@@ -41,7 +41,7 @@
     name: consul-template
     comment: consul template service account
     system: true
-    shell: /bin/false
+    shell: /bin/bash
     home: /etc/consul-template
     create_home: false
 

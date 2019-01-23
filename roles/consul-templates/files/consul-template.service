@@ -1,21 +1,22 @@
 # man systemd.unit
 # man systemd.service
-
+# https://github.com/claranet/puppet-consul_template/blob/master/templates/consul-template.systemd.erb
 [Unit]
-Description="HashiCorp Consul-Template"
-Documentation=https://www.consul.io/
-Requires=network-online.target
-After=network-online.target
-#ConditionFileNotEmpty=/etc/consul.d/consul.hcl
+Description=Consul-Template Daemon
+Wants=basic.target
+After=basic.target network.target
 
 [Service]
 User=consul-template
 Group=consul-template
-ExecStart=/usr/local/bin/consul-template -config=/etc/consul-template/configs
-ExecReload=/usr/local/bin/consul-template reload
+ExecStart=/usr/local/bin/consul-template -config=/etc/consul-template/config
+SuccessExitStatus=12
+ExecReload=/bin/kill -SIGHUP $MAINPID
+ExecStop=/bin/kill -SIGINT $MAINPID
 KillMode=process
-Restart=on-failure
-LimitNOFILE=65536
+Restart=always
+RestartSec=42s
+LimitNOFILE=4096
 
 [Install]
 WantedBy=multi-user.target
